@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/:./css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meliana322/ohmyfood1.git"
+  },
+  "author": "Virginie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Meliana322/ohmyfood1/issues"
+  },
+  "homepage": "https://github.com/Meliana322/ohmyfood1#readme",
+  "dependencies": {
+    "sass": "^1.49.0"
+  }
+}

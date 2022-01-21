@@ -1,0 +1,27 @@
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+@import "./base/reset";
+@import "./base/typography";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./components/cards";
+@import "./components/buttons";
+
+body {
+  box-sizing: border-box;
+  font-family: $font-roboto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main {
+  width: 100%;
+}
+li,
+a {
+  text-decoration: none;
+  list-style-type: none;
+}
