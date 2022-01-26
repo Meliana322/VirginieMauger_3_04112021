@@ -1,0 +1,185 @@
+@media all and (min-width: 769px) and (max-width: 991px) {
+  /* TYPOGRAHY */
+  h1 {
+    font-size: 35px;
+    font-family: "Shrikhand", cursive;
+    text-align: center;
+    font-weight: 100;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .menu__restaurant h2 {
+    font-family: "Shrikhand", cursive;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  .tag {
+    font-size: 16px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  /* FIN TYPOGRAHY */
+  /* BUTTONS */
+  /* FIN BUTTONS */
+  /* CARDS */
+  /* page accueil section restaurant */
+  .card {
+    height: 350px;
+  }
+  .card img {
+    height: 250px;
+  }
+}
+.restaurant__description__textes h3 {
+  margin-bottom: 10px;
+}
+
+/* pages menu restaurants */
+.carte {
+  width: 100%;
+  height: 66px;
+  display: grid;
+  grid-template-columns: 70% 18% 0%;
+  grid-template-rows: 66px;
+  grid-column-gap: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #e4e4e4;
+}
+.carte .carte__description-menu {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5%;
+  width: 100%;
+}
+.carte .carte__description-menu h4 {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carte .carte__description-menu p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carte .carte__prix {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.carte .carte__icone {
+  width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-check-circle {
+  font-size: 0;
+}
+
+.carte:hover {
+  grid-template-columns: 65% 15% 16%;
+  grid-column-gap: 2%;
+  /* FIN CARDS */
+  /* FOOTER */
+  /* FIN FOOTER */
+  /* HEADER */
+  /* Header pages des restaurants */
+  /* FIN HEADER */
+  /* MENUS DES RESTAURANTS */
+  /* FIN MENUS DES RESTAURANTS */
+  /* SECTION FONCTIONNEMENT */
+  /* FIN SECTION FONCTIONNEMENT */
+  /* SECTION LOCALISATION */
+  /* FIN SECTION LOCALISATION */
+  /* SECTION RESERVATION  */
+  /* FIN SECTION RESERVATION  */
+  /* SECTION RESTAURANT  */
+  /* FIN SECTION RESTAURANT  */
+}
+.carte:hover .carte__description-menu {
+  width: calc(100% - 10px);
+}
+.carte:hover .carte__description-menu h4 {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carte:hover .carte__description-menu p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carte:hover .carte__prix {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.carte:hover .carte__icone {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99e2d0;
+  border-radius: 0 15px 15px 0;
+}
+.carte:hover .carte__icone .fa-check-circle {
+  font-size: 100%;
+  color: #fff;
+}
+.carte:hover .footer {
+  flex-direction: row;
+  width: 100%;
+}
+.carte:hover .footer h2 {
+  width: 15%;
+  margin: auto;
+}
+.carte:hover .footer .footer__nav {
+  flex-direction: row;
+  width: 80%;
+  align-items: center;
+}
+.carte:hover .footer .footer__nav .footer__icone {
+  width: 20%;
+}
+.carte:hover .footer .footer__nav a {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 20px;
+}
+.carte:hover .footer .footer__nav i {
+  width: 10%;
+}
+.carte:hover .header--image-fond {
+  height: 350px;
+}
+.carte:hover .header--image-fond img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style-tab.css.map */

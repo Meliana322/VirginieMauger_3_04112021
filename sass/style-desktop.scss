@@ -1,0 +1,206 @@
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$color-quarternary: #f2f2f2;
+$color-white: #fff;
+$color-black: #000;
+$color-background-tag: #99e2d0;
+$color-tag: #008766;
+$font-shrikhand: "Shrikhand", cursive;
+$font-roboto: "Roboto", sans-serif;
+
+@mixin card-shadow {
+  box-shadow: 5px 5px 5px rgb(228, 228, 228);
+}
+@media screen and (min-width: 992px) {
+  /* TYPOGRAHY */
+  h1 {
+    font-size: 40px;
+    font-family: $font-shrikhand;
+    text-align: center;
+    font-weight: 100;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+  .menu__restaurant {
+    h2 {
+      font-family: $font-shrikhand;
+      font-weight: 500;
+    }
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  .tag {
+    font-size: 14px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  /* FIN TYPOGRAHY */
+
+  /* BUTTONS */
+
+  .reservation__btn {
+    width: 350px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .commander__btn {
+    .commander__btn--form {
+      font-size: 20px;
+      width: 350px;
+      height: 60px;
+    }
+  }
+
+  /* FIN BUTTONS */
+
+  /* CARDS */
+
+  /* pages menu restaurants */
+
+  .carte {
+    grid-template-rows: 96px;
+    height: 96px;
+
+    .carte__description-menu p {
+      margin-top: 5px;
+    }
+  }
+
+  /* FIN CARDS */
+
+  /* FOOTER */
+
+  .footer {
+    flex-direction: row;
+    width: 100%;
+
+    h2 {
+      width: 15%;
+      font-size: 22px;
+      margin: auto;
+    }
+
+    .footer__nav {
+      flex-direction: row;
+      width: 80%;
+      align-items: center;
+
+      .footer__icone {
+        width: 20%;
+      }
+
+      a {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 20px;
+      }
+
+      i {
+        width: 10%;
+      }
+    }
+  }
+
+  /* FIN FOOTER */
+
+  /* HEADER */
+
+  /* Header pages des restaurants */
+
+  .header--image-fond {
+    height: 450px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* FIN HEADER */
+
+  /* MENUS DES RESTAURANTS */
+
+  .menu {
+    .menu__restaurant {
+      width: 96%;
+    }
+  }
+  .menu__presentation__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 5%;
+
+    .menu__presentation__entrees {
+      grid-column-start: 1;
+    }
+    .menu__presentation__plats {
+      grid-column-start: 2;
+    }
+    .menu__presentation__desserts {
+      grid-column-start: 3;
+    }
+  }
+
+  /* FIN MENUS DES RESTAURANTS */
+
+  /* SECTION FONCTIONNEMENT */
+
+  .fonctionnement {
+    width: 95%;
+
+    ol.fonctionnement__container-filtres {
+      flex-direction: row;
+    }
+  }
+
+  /* FIN SECTION FONCTIONNEMENT */
+
+  /* SECTION LOCALISATION */
+
+  /* FIN SECTION LOCALISATION */
+
+  /* SECTION RESERVATION  */
+
+  .reservation {
+    p {
+      font-size: 20px;
+    }
+  }
+
+  /* FIN SECTION RESERVATION  */
+
+  /* SECTION RESTAURANT  */
+
+  .restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    h2 {
+      width: 95%;
+    }
+
+    .card {
+      width: 45%;
+    }
+  }
+
+  /* FIN SECTION RESTAURANT  */
+}

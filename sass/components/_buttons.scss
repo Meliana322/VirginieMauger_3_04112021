@@ -1,0 +1,42 @@
+/* Bouton accueil */
+.reservation__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient($color-secondary, $color-primary);
+  width: 220px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 16px;
+  text-decoration: none;
+  @include card-shadow;
+
+  .btn__accueil {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+.commander__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .commander__btn--form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient($color-secondary, $color-primary);
+    width: 220px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 16px;
+    text-decoration: none;
+    @include card-shadow;
+    margin: 45px auto;
+
+    .btn--form-text {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}

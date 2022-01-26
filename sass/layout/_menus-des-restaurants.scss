@@ -1,0 +1,56 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: $color-quarternary;
+  padding-top: 40px;
+  border-radius: 30px 30px 0 0;
+  margin-top: -60px;
+
+  .menu__restaurant {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.menu__presentation {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  height: auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr 4fr 4fr 1fr;
+
+  .menu__presentation__h3 {
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: 400;
+
+    &:after {
+      background-color: $color-background-tag;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 5px;
+      width: 58px;
+      content: "";
+    }
+  }
+}
+
+.menu__presentation__entrees,
+.menu__presentation__plats,
+.menu__presentation__desserts {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 14px;
+
+  h3 {
+    font-weight: 300;
+    padding-top: 10px;
+  }
+}

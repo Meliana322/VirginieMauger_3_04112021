@@ -1,0 +1,21 @@
+.localisation {
+  padding-bottom: 55px;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #eaeaea;
+  box-shadow: 0 5px 5px -5px dimgrey inset;
+  .local__icon {
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .localisation__ville {
+    display: flex;
+    align-items: center;
+  }
+}

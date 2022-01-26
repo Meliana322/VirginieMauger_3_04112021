@@ -1,0 +1,14 @@
+.reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba($color-quarternary, 1);
+  padding-bottom: 55px;
+
+  & p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    width: 90%;
+  }
+}

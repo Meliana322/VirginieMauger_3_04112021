@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Ohmyfood</title>
+    <title>ohmyfood</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Ohmyfood, entreprise de commande de repas en ligne" />
     <!-- 
@@ -14,6 +14,8 @@
     <script src="https://kit.fontawesome.com/104383f80a.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" media="all and (min-width: 769px) and (max-width: 991px)" href="./css/style-tab.css" />
+    <link rel="stylesheet" media="screen and (min-width: 992px)" href="./css/style-desktop.css" />
 
 </head>
 
@@ -28,8 +30,9 @@
 
         <section class="localisation">
             <i class="fa-map-marker-alt fas local__icon"></i>
-            <div>Paris, Belleville</div>
+            <div class="localisation__ville">Paris, Belleville</div>
         </section>
+
         <section>
             <div class="reservation">
                 <h2>Réservez le menu qui vous convient</h2>
@@ -45,9 +48,9 @@
 
         <section class="fonctionnement">
             <h2>Fonctionnement</h2>
-            <ol class="container-filtres">
+            <ol class="fonctionnement__container-filtres">
 
-                <li class="filtre">
+                <li class="filtre filtre--background">
                     <div class="filtre--form">
                         <div class="filtre__number">1</div>
                     </div>
@@ -56,7 +59,7 @@
                         <p>Choisissez un restaurant</p>
                     </div>
                 </li>
-                <li class="filtre">
+                <li class="filtre filtre--background">
                     <div class="filtre--form">
                         <div class="filtre__number">2</div>
                     </div>
@@ -65,7 +68,7 @@
                         <p>Composez votre menu</p>
                     </div>
                 </li>
-                <li class="filtre filtre-background">
+                <li class="filtre filtre--background-variation">
                     <div class="filtre--form">
                         <div class="filtre__number">3</div>
                     </div>
@@ -80,21 +83,22 @@
 
         <section class="restaurants">
             <h2>Restaurants</h2>
-            <div class="card"><a href="./page1.html">
+            <div class="card"><a href="./la-palette-du-gout.html">
                     <div class="card__tag">Nouveau</div>
                     <img src="./images/restaurants/La-palette-du-gout.jpg" alt="Restaurant La palette du goût">
+                    <div class="restaurant__description">
+                        <div class="restaurant__description__textes">
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <div class="card-icon card-icon-heart">
+                            <i class="far fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
                 </a>
-                <div class="restaurant__description">
-                    <div class="restaurant__description__textes">
-                        <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
-                    </div>
-                    <div class="card-icon">
-                        <i class="far fa-heart"></i>
-                    </div>
-                </div>
-
             </div>
+
             <div class="card"><a href="./la-palette-du-gout-html">
                     <div class="card__tag">Nouveau</div>
                     <img src="./images/restaurants/La-note-enchantee.jpg" alt="Restaurant La note enchantée">
@@ -107,30 +111,33 @@
                             <i class="far fa-heart"></i>
                         </div>
                     </div>
+                </a>
             </div>
-            <div class="card">
-                <img src="./images/restaurants/A-la-francaise.jpg" alt="Restaurant A la française">
-                <div class="restaurant__description">
-                    <div class="restaurant__description__textes">
-                        <h3>A la française</h3>
-                        <p>Cité Rouge</p>
+            <div class="card"><a href="./a-la-francaise.html">
+                    <img src="./images/restaurants/A-la-francaise.jpg" alt="Restaurant A la française">
+                    <div class="restaurant__description">
+                        <div class="restaurant__description__textes">
+                            <h3>A la française</h3>
+                            <p>Cité Rouge</p>
+                        </div>
+                        <div class="card-icon">
+                            <i class="far fa-heart"></i>
+                        </div>
                     </div>
-                    <div class="card-icon">
-                        <i class="far fa-heart"></i>
-                    </div>
-                </div>
+                </a>
             </div>
-            <div class="card">
-                <img src="./images/restaurants/Le-delice-des-sens.jpg" alt="Restaurant Le délicz des sens">
-                <div class="restaurant__description">
-                    <div class="restaurant__description__textes">
-                        <h3>Le délice des sens</h3>
-                        <p>Folie-Méricourt</p>
+            <div class="card"><a href="./le-delice-des-sens.html">
+                    <img src="./images/restaurants/Le-delice-des-sens.jpg" alt="Restaurant Le délice des sens">
+                    <div class="restaurant__description">
+                        <div class="restaurant__description__textes">
+                            <h3>Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <div class="card-icon">
+                            <i class="far fa-heart"></i>
+                        </div>
                     </div>
-                    <div class="card-icon">
-                        <i class="far fa-heart"></i>
-                    </div>
-                </div>
+                </a>
             </div>
         </section>
 
@@ -139,29 +146,21 @@
     <footer>
         <div class="footer">
             <h2>Ohmyfood</h2>
-            <nav class="nav-footer">
-
+            <nav class="footer__nav">
                 <a href="#">
                     <i class="fa-utensils fas footer__icon" aria-hidden="true">
                     </i>Proposer un restaurant
                 </a>
-
-
                 <a href="#">
                     <i class="fa-hands-helping fas footer__icon" aria-hidden="true">
                     </i>Devenir partenaire
                 </a>
-
-
                 <a href="#">
                     Mentions légales
                 </a>
-
-
                 <a href="#">
                     Contact
                 </a>
-
             </nav>
         </div>
     </footer>

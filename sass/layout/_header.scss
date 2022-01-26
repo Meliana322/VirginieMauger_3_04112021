@@ -1,3 +1,42 @@
-.header__heading {
-  color: $color-black;
+/* Header page d'accueil */
+header {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 5px;
+
+  .header__heading {
+    color: $color-black;
+  }
+}
+
+/* Header pages des restaurants */
+.header-restaurants {
+  display: flex;
+  width: 100%;
+  position: relative;
+  align-items: center;
+
+  .header-restaurants__icone {
+    position: absolute;
+    left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-black;
+  }
+
+  .header-restaurants__heading {
+    width: 100%;
+    color: $color-black;
+  }
+}
+.header--image-fond {
+  display: flex;
+  height: 250px;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
 }

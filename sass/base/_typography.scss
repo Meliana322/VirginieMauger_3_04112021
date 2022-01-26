@@ -1,24 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 
-h1 {
-  font-family: $font-shrikhand;
-  font-size: 30px;
-  text-align: center;
-}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-family: $font-shrikhand;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 100;
+  }
 
-.fonctionnement h2 {
-  font-size: 25px;
-}
+  h2 {
+    font-size: 25px;
+  }
+  .menu__restaurant {
+    h2 {
+      font-family: $font-shrikhand;
+      font-weight: 500;
+    }
+  }
 
-p {
-  font-size: 16px;
-}
+  p {
+    font-size: 16px;
+  }
 
-.tag {
-  font-size: 14px;
-}
+  .tag {
+    font-size: 14px;
+  }
 
-h4 {
-  font-size: 18px;
+  h4 {
+    font-size: 18px;
+  }
 }
