@@ -134,6 +134,7 @@
   }
   .fonctionnement ol.fonctionnement__container-filtres {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   /* SECTION RESERVATION  */
@@ -151,6 +152,7 @@
   }
   .restaurants .card {
     width: 45%;
+    height: 270px;
   }
 }
 

@@ -161,6 +161,7 @@ $font-roboto: "Roboto", sans-serif;
 
     ol.fonctionnement__container-filtres {
       flex-direction: row;
+      justify-content: space-between;
     }
   }
 
@@ -182,6 +183,7 @@ $font-roboto: "Roboto", sans-serif;
 
     .card {
       width: 45%;
+      height: 270px;
     }
   }
 }

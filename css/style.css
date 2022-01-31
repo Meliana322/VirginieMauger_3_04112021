@@ -414,6 +414,14 @@ template {
     transform: rotate(0);
   }
 }
+@keyframes check-slide {
+  0% {
+    transform: translateX(1);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 /* Header page d'accueil */
 header {
   width: 100%;
@@ -790,9 +798,6 @@ footer {
   font-weight: 900;
   content: "\f058";
   color: #fff;
-  animation-name: check;
-  animation-duration: 100ms;
-  display: inline-block;
 }
 
 /* Bouton accueil */
