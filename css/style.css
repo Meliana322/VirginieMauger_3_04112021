@@ -368,6 +368,52 @@ template {
     font-size: 18px;
   }
 }
+/* Coeurs au survol */
+.card-icon .icone-heart--full {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 20ms ease-in-out;
+  background-image: linear-gradient(#ff79da, #9356dc);
+}
+.card-icon .icone-heart--full:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes check {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 /* Header page d'accueil */
 header {
   width: 100%;
@@ -481,7 +527,6 @@ header .header__heading {
   width: 90%;
   margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -645,12 +690,13 @@ footer {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 3%;
 }
 .restaurant__description .restaurant__description__textes {
   width: 100%;
 }
 .restaurant__description h3 {
-  margin: 10px 0px 0px 0px;
+  margin: 0;
 }
 .restaurant__description p {
   margin: 0;
@@ -659,27 +705,17 @@ footer {
 .card-icon {
   display: flex;
   align-items: center;
-  height: 100%;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
 }
-.card-icon i {
-  color: black;
+.card-icon .fa-heart {
   font-size: 20px;
+  position: absolute;
+  right: 0;
 }
 
-/* VERSION TABLETTE */
-@media all and (min-width: 769px) and (max-width: 992px) {
-  .card {
-    height: 350px;
-  }
-  .card img {
-    height: 250px;
-  }
-}
-.restaurant__description__textes h3 {
-  margin-bottom: 10px;
-}
-
-/* pages menu restaurants */
+/* !Pages restaurants Menu */
 .carte {
   width: 100%;
   height: 66px;
@@ -690,6 +726,20 @@ footer {
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 5px 5px 5px #e4e4e4;
+  animation: move 1s;
+  animation-fill-mode: both;
+}
+.carte:nth-child(2) {
+  animation-delay: 100ms;
+}
+.carte:nth-child(3) {
+  animation-delay: 150ms;
+}
+.carte:nth-child(4) {
+  animation-delay: 200ms;
+}
+.carte:nth-child(5) {
+  animation-delay: 250ms;
 }
 .carte .carte__description-menu {
   white-space: nowrap;
@@ -699,7 +749,8 @@ footer {
   flex-direction: column;
   justify-content: center;
   margin-left: 5%;
-  width: 100%;
+  width: calc(100% - 10px);
+  animation: opacity 1s;
 }
 .carte .carte__description-menu h4 {
   margin: 0;
@@ -715,12 +766,7 @@ footer {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-}
-.carte .carte__icone {
-  width: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  animation: opacity 1s;
 }
 
 .fa-check-circle {
@@ -731,47 +777,24 @@ footer {
   grid-template-columns: 65% 15% 16%;
   grid-column-gap: 2%;
 }
-.carte:hover .carte__description-menu {
-  width: calc(100% - 10px);
-}
-.carte:hover .carte__description-menu h4 {
-  margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.carte:hover .carte__description-menu p {
-  margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.carte:hover .carte__prix {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
 .carte:hover .carte__icone {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #99e2d0;
   border-radius: 0 15px 15px 0;
+  background-color: #99e2d0;
 }
-.carte:hover .carte__icone .fa-check-circle {
-  font-size: 100%;
+.carte:hover .carte__icone .carte__icone--slide::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f058";
   color: #fff;
+  animation-name: check;
+  animation-duration: 100ms;
+  display: inline-block;
 }
 
-/* VERSION DESKTOP */
-@media all and (min-width: 992px) and (max-width: 1920px) {
-  .carte {
-    grid-template-rows: 96px;
-    height: 96px;
-  }
-  .carte .carte__description-menu p {
-    margin-top: 5px;
-  }
-}
 /* Bouton accueil */
 .reservation__btn {
   display: flex;
@@ -816,7 +839,7 @@ footer {
 body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  max-width: 768px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-left: auto;
@@ -831,19 +854,7 @@ li,
 a {
   text-decoration: none;
   list-style-type: none;
-}
-
-@media all and (min-width: 769px) and (max-width: 991px) {
-  body {
-    min-width: 769px;
-    max-width: 991px;
-  }
-}
-@media all and (min-width: 992px) and (max-width: 1920px) {
-  body {
-    min-width: 992px;
-    max-width: 1920px;
-  }
+  color: #000;
 }
 
 /*# sourceMappingURL=style.css.map */

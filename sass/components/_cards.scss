@@ -97,13 +97,14 @@
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 3%;
 
   .restaurant__description__textes {
     width: 100%;
   }
 
-  h3 {
-    margin: 10px 0px 0px 0px;
+  & h3 {
+    margin: 0;
   }
   p {
     margin: 0;
@@ -113,31 +114,18 @@
 .card-icon {
   display: flex;
   align-items: center;
-  height: 100%;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
 
-  i {
-    color: black;
+  .fa-heart {
     font-size: 20px;
+    position: absolute;
+    right: 0;
   }
 }
 
-/* VERSION TABLETTE */
-@media all and (min-width: 769px) and (max-width: 992px) {
-  .card {
-    height: 350px;
-
-    img {
-      height: 250px;
-    }
-  }
-}
-.restaurant__description__textes {
-  h3 {
-    margin-bottom: 10px;
-  }
-}
-
-/* pages menu restaurants */
+/* !Pages restaurants Menu */
 .carte {
   width: 100%;
   height: 66px;
@@ -149,6 +137,15 @@
   border-radius: 15px;
   @include card-shadow;
 
+  animation: move 1s;
+  animation-fill-mode: both;
+
+  @for $i from 2 through 5 {
+    &:nth-child(#{$i}) {
+      animation-delay: 50ms * $i;
+    }
+  }
+
   .carte__description-menu {
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -157,7 +154,8 @@
     flex-direction: column;
     justify-content: center;
     margin-left: 5%;
-    width: 100%;
+    width: calc(100% - 10px);
+    animation: opacity 1s;
 
     h4 {
       margin: 0;
@@ -175,12 +173,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-  }
-  .carte__icone {
-    width: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    animation: opacity 1s;
   }
 }
 .fa-check-circle {
@@ -191,49 +184,22 @@
   grid-template-columns: 65% 15% 16%;
   grid-column-gap: 2%;
 
-  .carte__description-menu {
-    width: calc(100% - 10px);
-
-    h4 {
-      margin: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    p {
-      margin: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-
-  .carte__prix {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
   .carte__icone {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #99e2d0;
     border-radius: 0 15px 15px 0;
+    background-color: $color-background-tag;
 
-    .fa-check-circle {
-      font-size: 100%;
+    .carte__icone--slide::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f058";
       color: $color-white;
-    }
-  }
-}
-
-/* VERSION DESKTOP */
-@media all and (min-width: 992px) and (max-width: 1920px) {
-  .carte {
-    grid-template-rows: 96px;
-    height: 96px;
-
-    .carte__description-menu p {
-      margin-top: 5px;
+      animation-name: check;
+      animation-duration: 100ms;
+      display: inline-block;
     }
   }
 }

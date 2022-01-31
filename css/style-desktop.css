@@ -1,4 +1,11 @@
 @media screen and (min-width: 992px) {
+  body {
+    box-sizing: border-box;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   /* TYPOGRAHY */
   h1 {
     font-size: 40px;
@@ -32,7 +39,6 @@
     font-size: 22px;
   }
 
-  /* FIN TYPOGRAHY */
   /* BUTTONS */
   .reservation__btn {
     width: 350px;
@@ -46,7 +52,6 @@
     height: 60px;
   }
 
-  /* FIN BUTTONS */
   /* CARDS */
   /* pages menu restaurants */
   .carte {
@@ -57,7 +62,10 @@
     margin-top: 5px;
   }
 
-  /* FIN CARDS */
+  .card-icon .fa-heart {
+    font-size: 30px;
+  }
+
   /* FOOTER */
   .footer {
     flex-direction: row;
@@ -83,13 +91,13 @@
     align-items: center;
     margin-top: auto;
     margin-bottom: auto;
-    font-size: 20px;
+    font-size: 18px;
   }
   .footer .footer__nav i {
     width: 10%;
+    margin-right: 5%;
   }
 
-  /* FIN FOOTER */
   /* HEADER */
   /* Header pages des restaurants */
   .header--image-fond {
@@ -100,7 +108,6 @@
     object-fit: cover;
   }
 
-  /* FIN HEADER */
   /* MENUS DES RESTAURANTS */
   .menu .menu__restaurant {
     width: 96%;
@@ -121,7 +128,6 @@
     grid-column-start: 3;
   }
 
-  /* FIN MENUS DES RESTAURANTS */
   /* SECTION FONCTIONNEMENT */
   .fonctionnement {
     width: 95%;
@@ -130,15 +136,11 @@
     flex-direction: row;
   }
 
-  /* FIN SECTION FONCTIONNEMENT */
-  /* SECTION LOCALISATION */
-  /* FIN SECTION LOCALISATION */
   /* SECTION RESERVATION  */
   .reservation p {
     font-size: 20px;
   }
 
-  /* FIN SECTION RESERVATION  */
   /* SECTION RESTAURANT  */
   .restaurants {
     flex-direction: row;
@@ -150,8 +152,6 @@
   .restaurants .card {
     width: 45%;
   }
-
-  /* FIN SECTION RESTAURANT  */
 }
 
 /*# sourceMappingURL=style-desktop.css.map */

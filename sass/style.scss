@@ -2,6 +2,7 @@
 @import "./abstracts/variables";
 @import "./base/reset";
 @import "./base/typography";
+@import "./base/animations";
 @import "./layout/header";
 @import "./layout/section-localisation";
 @import "./layout/section-reservation";
@@ -15,7 +16,7 @@
 body {
   box-sizing: border-box;
   font-family: $font-roboto;
-  max-width: 768px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-left: auto;
@@ -29,16 +30,5 @@ li,
 a {
   text-decoration: none;
   list-style-type: none;
-}
-@media all and (min-width: 769px) and (max-width: 991px) {
-  body {
-    min-width: 769px;
-    max-width: 991px;
-  }
-}
-@media all and (min-width: 992px) and (max-width: 1920px) {
-  body {
-    min-width: 992px;
-    max-width: 1920px;
-  }
+  color: $color-black;
 }
