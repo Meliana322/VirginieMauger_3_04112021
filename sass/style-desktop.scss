@@ -12,6 +12,7 @@ $font-roboto: "Roboto", sans-serif;
 @mixin card-shadow {
   box-shadow: 5px 5px 5px rgb(228, 228, 228);
 }
+
 @media screen and (min-width: 992px) {
   body {
     box-sizing: border-box;
@@ -69,58 +70,6 @@ $font-roboto: "Roboto", sans-serif;
     }
   }
 
-  /* CARDS */
-  /* pages menu restaurants */
-  .carte {
-    grid-template-rows: 96px;
-    height: 96px;
-
-    .carte__description-menu p {
-      margin-top: 5px;
-    }
-  }
-
-  .card-icon .fa-heart {
-    font-size: 30px;
-  }
-
-  /* FOOTER */
-  .footer {
-    flex-direction: row;
-    width: 100%;
-
-    h2 {
-      width: 15%;
-      font-size: 22px;
-      margin: auto;
-    }
-
-    .footer__nav {
-      flex-direction: row;
-      width: 80%;
-      align-items: center;
-
-      .footer__icone {
-        width: 20%;
-      }
-
-      a {
-        width: 30%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: auto;
-        margin-bottom: auto;
-        font-size: 18px;
-      }
-
-      i {
-        width: 10%;
-        margin-right: 5%;
-      }
-    }
-  }
-
   /* HEADER */
   /* Header pages des restaurants */
 
@@ -133,8 +82,23 @@ $font-roboto: "Roboto", sans-serif;
     }
   }
 
+  /* CARDS */
+
+  /* Section menu restaurants */
+  .card-icon .fa-heart {
+    font-size: 30px;
+  }
+
+  /* Pages menu restaurants */
+  .carte {
+    grid-template-rows: 96px;
+    height: 96px;
+  }
+
   /* MENUS DES RESTAURANTS */
   .menu {
+    padding-bottom: 30px;
+
     .menu__restaurant {
       width: 96%;
     }
@@ -150,8 +114,16 @@ $font-roboto: "Roboto", sans-serif;
     .menu__presentation__plats {
       grid-column-start: 2;
     }
+    .menu__presentation__carte {
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
     .menu__presentation__desserts {
       grid-column-start: 3;
+    }
+  }
+  .menu__presentation {
+    & h3 {
+      margin-bottom: 55px;
     }
   }
   .carte__icone--slide::before {
@@ -187,6 +159,43 @@ $font-roboto: "Roboto", sans-serif;
     .card {
       width: 45%;
       height: 270px;
+    }
+  }
+
+  /* FOOTER */
+  .footer {
+    flex-direction: row;
+    width: 100%;
+
+    h2 {
+      width: 15%;
+      font-size: 22px;
+      margin: auto;
+    }
+
+    .footer__nav {
+      display: flex;
+      flex-direction: row;
+      width: 80%;
+      align-items: center;
+
+      .footer__icone {
+        width: 20%;
+      }
+
+      a {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 18px;
+      }
+
+      i {
+        width: 10%;
+      }
     }
   }
 }

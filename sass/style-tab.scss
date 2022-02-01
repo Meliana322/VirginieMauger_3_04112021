@@ -36,6 +36,15 @@
   h4 {
     font-size: 20px;
   }
+  /* !HEADER */
+  /* Header pages des restaurants */
+  .header--image-fond {
+    height: 450px;
+  }
+  .header--image-fond img {
+    width: 100%;
+    object-fit: cover;
+  }
 
   /* !CARDS */
   /* pages accueil section restaurants */
@@ -46,22 +55,34 @@
       height: 250px;
     }
   }
+  /* !SECTION FONCTIONNEMENT */
+  .fonctionnement {
+    width: 95%;
+  }
+  /* !SECTION RESERVATION  */
+  .reservation p {
+    font-size: 20px;
+  }
+  /* !SECTION RESTAURANT  */
+  .restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .restaurants h2 {
+    width: 95%;
+  }
+  .restaurants .card {
+    width: 45%;
+  }
 
   .card-icon .fa-heart {
     font-size: 25px;
   }
 
-  /* pages menu restaurants */
-  .carte {
-    grid-template-rows: 96px;
-    height: 96px;
-  }
-  .carte .carte__description-menu p {
-    margin-top: 5px;
-  }
-
-  .carte__icone--slide::before {
-    font-size: 25px;
+  .commander__btn {
+    .commander__btn--form {
+      margin: 75px auto;
+    }
   }
 
   /* !FOOTER */
@@ -82,39 +103,18 @@
     }
   }
 
-  /* !HEADER */
-  /* Header pages des restaurants */
-  .header--image-fond {
-    height: 450px;
-  }
-  .header--image-fond img {
-    width: 100%;
-    object-fit: cover;
-  }
-
   /* MENUS DES RESTAURANTS */
   .menu .menu__restaurant {
     width: 90%;
   }
+  /* pages menu restaurants */
+  .carte {
+    grid-template-rows: 96px;
+    height: 96px;
+  }
 
-  /* !SECTION FONCTIONNEMENT */
-  .fonctionnement {
-    width: 95%;
-  }
-  /* !SECTION RESERVATION  */
-  .reservation p {
-    font-size: 20px;
-  }
-  /* !SECTION RESTAURANT  */
-  .restaurants {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .restaurants h2 {
-    width: 95%;
-  }
-  .restaurants .card {
-    width: 45%;
+  .carte__icone--slide::before {
+    font-size: 25px;
   }
 }
 

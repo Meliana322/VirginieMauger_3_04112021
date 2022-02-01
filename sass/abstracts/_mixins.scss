@@ -1,6 +1,9 @@
+/* Ombres cartes et loader */
 @mixin card-shadow {
   box-shadow: 5px 5px 5px rgb(228, 228, 228);
 }
+
+/*Dégradé rose vers violet */
 @mixin gradient {
   background-image: linear-gradient($color-secondary, $color-primary);
 }

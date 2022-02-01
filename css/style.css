@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* Ombres cartes et loader */
+/*Dégradé rose vers violet */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -369,29 +371,6 @@ template {
     font-size: 18px;
   }
 }
-/* Coeurs au survol */
-.card-icon .icone-heart--full {
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
-  transition: all 20ms ease-in-out;
-  background-image: linear-gradient(#ff79da, #9356dc);
-}
-.card-icon .icone-heart--full:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-/*
-@keyframes appear {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}*/
 /* Opacité texte apparition chargement */
 @keyframes opacity {
   0% {
@@ -419,7 +398,17 @@ template {
     transform: rotate(0);
   }
 }
-/* LOADER Disparition background */
+/* LOADER background */
+@keyframes loader-anim-background {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+/* LOADER Disparition cercle1 */
 @keyframes loader-anim {
   0% {
     transform: rotate(0deg);
@@ -428,14 +417,13 @@ template {
     transform: rotate(360deg);
   }
 }
-/* LOADER animation circle */
-@keyframes loader-anim-background {
+/* LOADER Disparition cercle2 */
+@keyframes loader-anim2 {
   0% {
-    opacity: 1;
+    transform: rotate(360deg);
   }
   100% {
-    opacity: 0;
-    z-index: -1;
+    transform: rotate(0deg);
   }
 }
 /* Header page d'accueil */
@@ -546,6 +534,7 @@ header .header__heading {
   padding-top: 40px;
   border-radius: 30px 30px 0 0;
   margin-top: -60px;
+  padding-bottom: 20px;
 }
 .menu .menu__restaurant {
   width: 90%;
@@ -625,29 +614,67 @@ footer {
 /* Section Loader */
 .section {
   position: fixed;
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
   height: 100vh;
   width: 100%;
   z-index: 100;
-  background-color: rgba(0, 0, 0, 0.3);
-  animation: loader-anim-background 3s linear forwards;
+  background-color: rgba(0, 0, 0, 0.7);
+  animation: loader-anim-background 5s linear forwards;
   justify-content: center;
   align-items: center;
   /* loader cercle */
 }
 .section .loader {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.section .loader p {
+  box-shadow: 5px 5px 5px #e4e4e4;
+  font-size: 18px;
+}
+.section .loader-quart {
+  border-radius: 50%;
+  border: 10px solid #9356dc;
+  position: absolute;
+  grid-row: 1;
+  z-index: 1;
+}
+.section .loader-quart::after {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: -10px;
+  border: 10px solid transparent;
+  border-radius: 50%;
+  border-top-color: #ff79da;
+  animation: loader-anim 5s linear forwards;
+}
+.section .loader2 {
   width: 150px;
   height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.section .loader-quart {
+.section .loader-double {
   border-radius: 50%;
   border: 10px solid #9356dc;
   position: relative;
+  grid-row: 1;
 }
-.section .loader-quart::after {
+.section .loader-double::after {
   content: "";
   display: flex;
   justify-content: center;
@@ -659,7 +686,8 @@ footer {
   border: 10px solid transparent;
   border-radius: 50%;
   border-top-color: #ff79da;
-  animation: loader-anim 3s linear forwards;
+  border-bottom-color: #ff79da;
+  animation: loader-anim2 5s linear forwards;
 }
 
 /* VERSION MOBILE */
@@ -771,11 +799,24 @@ footer {
   justify-content: center;
   cursor: pointer;
   position: relative;
+  /* Coeurs au survol */
 }
 .card-icon .fa-heart {
   font-size: 20px;
   position: absolute;
   right: 0;
+}
+.card-icon .icone-heart--full {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 20ms ease-in-out;
+  background-image: linear-gradient(#ff79da, #9356dc);
+}
+.card-icon .icone-heart--full:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 /* !Pages restaurants Menu */
@@ -790,7 +831,9 @@ footer {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 5px 5px 5px #e4e4e4;
-  transition: ease-in-out;
+  animation: move 1s;
+  animation-fill-mode: both;
+  transition: 0.3s ease-in-out;
 }
 .carte:nth-child(2) {
   animation-delay: 200ms;
@@ -824,6 +867,7 @@ footer {
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-top: 5px;
 }
 .carte .carte__prix {
   display: flex;
