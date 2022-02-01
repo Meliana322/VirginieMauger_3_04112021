@@ -61,36 +61,11 @@
     margin-top: 5px;
   }
 
+  .carte__icone--slide::before {
+    font-size: 25px;
+  }
+
   /* !FOOTER */
-  /*.footer {
-    flex-direction: row;
-    width: 100%;
-  }
-  .footer h2 {
-    width: 15%;
-    font-size: 22px;
-    margin: auto;
-  }
-  .footer .footer__nav {
-    flex-direction: row;
-    width: 80%;
-    align-items: center;
-  }
-  .footer .footer__nav .footer__icone {
-    width: 20%;
-  }
-  .footer .footer__nav a {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: auto;
-    margin-bottom: auto;
-    font-size: 20px;
-  }
-  .footer .footer__nav i {
-    width: 10%;
-  }*/
   .footer .footer__nav {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 1fr;

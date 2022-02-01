@@ -128,6 +128,10 @@
     grid-column-start: 3;
   }
 
+  .carte__icone--slide::before {
+    font-size: 25px;
+  }
+
   /* SECTION FONCTIONNEMENT */
   .fonctionnement {
     width: 95%;
