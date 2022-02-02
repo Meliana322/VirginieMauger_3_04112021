@@ -638,7 +638,7 @@ footer {
   width: 100%;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.7);
-  animation: loader-anim-background 1500ms linear forwards;
+  animation: loader-anim-background 3s linear forwards;
   justify-content: center;
   align-items: center;
   /* loader icone ohmyfood */
