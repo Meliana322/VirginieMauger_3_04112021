@@ -370,6 +370,10 @@ template {
   h4 {
     font-size: 18px;
   }
+
+  .localisation h3 {
+    font-size: 20px;
+  }
 }
 /* Opacité texte apparition chargement */
 @keyframes opacity {
@@ -424,6 +428,17 @@ template {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+/* Apparition carte restaurant par le haut */
+@keyframes appear {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
   }
 }
 /* Header page d'accueil */
@@ -481,6 +496,7 @@ header .header__heading {
   justify-content: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  align-items: center;
 }
 .localisation .localisation__ville {
   display: flex;
@@ -618,76 +634,19 @@ footer {
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
   justify-items: center;
-  align-items: center;
   height: 100vh;
   width: 100%;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.7);
-  animation: loader-anim-background 5s linear forwards;
+  animation: loader-anim-background 1500ms linear forwards;
   justify-content: center;
   align-items: center;
-  /* loader cercle */
+  /* loader icone ohmyfood */
 }
-.section .loader {
-  width: 200px;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-}
-.section .loader p {
-  box-shadow: 5px 5px 5px #e4e4e4;
-  font-size: 18px;
-}
-.section .loader-quart {
-  border-radius: 50%;
-  border: 10px solid #9356dc;
-  position: absolute;
-  grid-row: 1;
-  z-index: 1;
-}
-.section .loader-quart::after {
-  content: "";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  top: -10px;
-  border: 10px solid transparent;
-  border-radius: 50%;
-  border-top-color: #ff79da;
-  animation: loader-anim 5s linear forwards;
-}
-.section .loader2 {
-  width: 150px;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.section .loader-double {
-  border-radius: 50%;
-  border: 10px solid #9356dc;
-  position: relative;
-  grid-row: 1;
-}
-.section .loader-double::after {
-  content: "";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  top: -10px;
-  border: 10px solid transparent;
-  border-radius: 50%;
-  border-top-color: #ff79da;
-  border-bottom-color: #ff79da;
-  animation: loader-anim2 5s linear forwards;
+.section .loader__img {
+  animation: appear 500ms;
+  width: 80%;
+  transform-origin: bottom right 60px;
 }
 
 /* VERSION MOBILE */

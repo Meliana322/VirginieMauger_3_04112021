@@ -5,79 +5,18 @@
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
   justify-items: center;
-  align-items: center;
   height: 100vh;
   width: 100%;
   z-index: 100;
   background-color: rgba($color: $color-black, $alpha: 0.7);
-  animation: loader-anim-background 5s linear forwards;
+  animation: loader-anim-background 1500ms linear forwards;
   justify-content: center;
   align-items: center;
 
-  .loader {
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $color-white;
-
-    p {
-      @include card-shadow;
-      font-size: 18px;
-    }
-  }
-
-  /* loader cercle */
-  .loader-quart {
-    border-radius: 50%;
-    border: 10px solid $color-primary;
-    position: absolute;
-    grid-row: 1;
-    z-index: 1;
-
-    &::after {
-      content: "";
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 200px;
-      height: 200px;
-      position: absolute;
-      top: -10px;
-      border: 10px solid transparent;
-      border-radius: 50%;
-      border-top-color: $color-secondary;
-      animation: loader-anim 5s linear forwards;
-    }
-  }
-  .loader2 {
-    width: 150px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .loader-double {
-    border-radius: 50%;
-    border: 10px solid $color-primary;
-    position: relative;
-    grid-row: 1;
-
-    &::after {
-      content: "";
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 150px;
-      height: 150px;
-      position: absolute;
-      top: -10px;
-      border: 10px solid transparent;
-      border-radius: 50%;
-      border-top-color: $color-secondary;
-      border-bottom-color: $color-secondary;
-      animation: loader-anim2 5s linear forwards;
-    }
+  /* loader icone ohmyfood */
+  .loader__img {
+    animation: appear 500ms;
+    width: 80%;
+    transform-origin: bottom right 60px;
   }
 }
