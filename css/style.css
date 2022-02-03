@@ -412,25 +412,7 @@ template {
     z-index: -1;
   }
 }
-/* LOADER Disparition cercle1 */
-@keyframes loader-anim {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-/* LOADER Disparition cercle2 */
-@keyframes loader-anim2 {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-/* Apparition carte restaurant par le haut */
+/* Apparition loader */
 @keyframes appear {
   0% {
     transform: scaleX(0);
