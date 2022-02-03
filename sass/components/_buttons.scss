@@ -11,11 +11,18 @@
   text-decoration: none;
   @include card-shadow;
 
+  &:hover {
+    transition-property: transform;
+    transform: scale(1.05);
+  }
+
   .btn__accueil {
     color: #fff;
     text-decoration: none;
   }
 }
+
+/* Bouton pages restaurants */
 .commander__btn {
   display: flex;
   justify-content: center;

@@ -19,8 +19,19 @@
     background-color: $color-quarternary;
   }
 
-  &.filtre--background-variation {
+  :hover {
     background-color: rgba($color-primary, 0.1);
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.2s ease-in-out;
+    @include card-shadow-darken;
+
+    .fas {
+      color: $color-primary;
+    }
+    &.filtre--background {
+      background-color: $color-quarternary;
+    }
   }
 
   .filtre--form {
@@ -51,12 +62,11 @@
     align-items: center;
     margin-left: -10px;
 
+    &:hover {
+      margin-left: -13px;
+    }
     .fas {
       margin-right: 20px;
-    }
-
-    .fa-store {
-      color: $color-primary;
     }
   }
 }
@@ -125,7 +135,6 @@
   .icone-heart--full {
     color: transparent;
     background-clip: text;
-    -webkit-background-clip: text;
     opacity: 0;
     transition: all 20ms ease-in-out;
     @include gradient;
@@ -198,7 +207,6 @@
 .carte:hover {
   grid-template-columns: 65% 15% 16%;
   grid-column-gap: 2%;
-  transition: 0.3s ease-in-out;
 
   .carte__icone {
     width: 100%;
@@ -210,6 +218,7 @@
 
     .carte__icone--slide {
       animation: check 500ms;
+      transform: translateX(1);
     }
 
     .carte__icone--slide::before {
