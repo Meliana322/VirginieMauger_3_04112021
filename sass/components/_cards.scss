@@ -26,6 +26,11 @@
     transition: all 0.2s ease-in-out;
     @include card-shadow-darken;
 
+    p {
+      box-shadow: unset;
+      background-color: transparent;
+    }
+
     .fas {
       color: $color-primary;
     }
@@ -99,6 +104,10 @@
     width: 100%;
   }
 }
+.card--form:hover {
+  @include card-shadow-darken;
+  @include opacity;
+}
 .restaurant__description {
   display: flex;
   justify-content: space-between;
@@ -133,8 +142,9 @@
   }
   /* Coeurs au survol */
   .icone-heart--full {
-    color: transparent;
     background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
     opacity: 0;
     transition: all 20ms ease-in-out;
     @include gradient;
@@ -148,19 +158,17 @@
 
 /* !Pages restaurants Menu */
 .carte {
-  width: 100%;
-  height: 66px;
-  display: grid;
-  grid-template-columns: 70% 18% 0%;
-  grid-template-rows: 66px;
-  grid-column-gap: 20px;
   background-color: $color-white;
-  border-radius: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
   overflow: hidden;
+  height: 66px;
   @include card-shadow;
   animation: move 1s;
   animation-fill-mode: both;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
 
   @for $i from 2 through 5 {
     &:nth-child(#{$i}) {
@@ -169,14 +177,13 @@
   }
 
   .carte__description-menu {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 5%;
-    width: calc(100% - 10px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: calc(100% - 40%);
     animation: opacity 1s;
 
     h4 {
@@ -191,41 +198,38 @@
       margin-top: 5px;
     }
   }
-
   .carte__prix {
     display: flex;
-    justify-content: flex-end;
     align-items: flex-end;
+    margin-left: 10%;
+    margin-right: 5%;
     animation: opacity 1s;
   }
 }
 
-.fa-check-circle {
-  font-size: 0;
+.carte__icone {
+  width: 0px;
+  transition: width 0.5s;
+  background-color: $color-background-tag;
+  color: white;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f058";
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carte:hover {
-  grid-template-columns: 65% 15% 16%;
-  grid-column-gap: 2%;
-
   .carte__icone {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0 15px 15px 0;
-    background-color: $color-background-tag;
+    width: 20%;
 
     .carte__icone--slide {
       animation: check 500ms;
-      transform: translateX(1);
-    }
-
-    .carte__icone--slide::before {
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      content: "\f058";
-      color: $color-white;
     }
   }
 }

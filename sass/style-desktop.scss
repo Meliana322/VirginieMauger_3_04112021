@@ -9,10 +9,6 @@ $color-tag: #008766;
 $font-shrikhand: "Shrikhand", cursive;
 $font-roboto: "Roboto", sans-serif;
 
-@mixin card-shadow {
-  box-shadow: 5px 5px 5px rgb(228, 228, 228);
-}
-
 @media screen and (min-width: 992px) {
   body {
     box-sizing: border-box;
@@ -45,6 +41,7 @@ $font-roboto: "Roboto", sans-serif;
 
   h3 {
     font-size: 25px;
+    font-weight: 600;
   }
 
   .tag {
@@ -53,6 +50,10 @@ $font-roboto: "Roboto", sans-serif;
 
   h4 {
     font-size: 22px;
+  }
+
+  .menu__presentation__h3 {
+    font-weight: 400;
   }
 
   /* BUTTONS */
@@ -93,41 +94,31 @@ $font-roboto: "Roboto", sans-serif;
   .carte {
     grid-template-rows: 96px;
     height: 96px;
+    margin-top: 40px;
   }
 
   /* MENUS DES RESTAURANTS */
-  .menu {
-    padding-bottom: 30px;
-
-    .menu__restaurant {
-      width: 96%;
-    }
-  }
   .menu__presentation__container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 5%;
+    grid-template-columns: 33% 33% 33%;
+    grid-column-gap: 25px;
+    justify-content: center;
 
-    .menu__presentation__entrees {
-      grid-column-start: 1;
-    }
-    .menu__presentation__plats {
-      grid-column-start: 2;
-    }
-    .menu__presentation__carte {
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    }
-    .menu__presentation__desserts {
-      grid-column-start: 3;
+    .menu__presentation__h3 {
+      margin-bottom: 50px;
     }
   }
+
   .menu__presentation {
-    & h3 {
-      margin-bottom: 55px;
+    .menu__presentation {
+      display: grid;
+      grid-row-gap: 15px;
+      grid-template-rows: 60px 96px 96px 96px;
     }
-  }
-  .carte__icone--slide::before {
-    font-size: 25px;
+
+    .fa-check-circle {
+      font-size: 25px;
+    }
   }
 
   /* SECTION FONCTIONNEMENT */

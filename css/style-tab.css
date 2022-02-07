@@ -38,6 +38,11 @@
     font-size: 20px;
   }
 
+  .menu__presentation__h3 {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
   /* !HEADER */
   /* Header pages des restaurants */
   .header--image-fond {
@@ -56,6 +61,10 @@
   }
   .card img {
     height: 250px;
+  }
+
+  .fa-check-circle {
+    font-size: 25px;
   }
 
   /* !SECTION FONCTIONNEMENT */
