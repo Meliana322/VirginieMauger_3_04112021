@@ -146,7 +146,7 @@
     -webkit-background-clip: text;
     color: transparent;
     opacity: 0;
-    transition: all 20ms ease-in-out;
+    transition: all 0.5s ease-in-out;
     @include gradient;
 
     &:hover {
@@ -159,7 +159,7 @@
 /* !Pages restaurants Menu */
 .carte {
   background-color: $color-white;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
@@ -222,6 +222,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .carte__icone--slide {
+    transition: transform 0.5s;
+  }
 }
 
 .carte:hover {
@@ -229,7 +233,7 @@
     width: 20%;
 
     .carte__icone--slide {
-      animation: check 500ms;
+      transform: rotate(1turn);
     }
   }
 }

@@ -18,27 +18,6 @@
   }
 }
 
-/* Bouton check sur les plats*/
-
-@keyframes check {
-  0% {
-    transform: rotate(90deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-/* Bouton check sur les plats*/
-
-@keyframes check-inverse {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(90deg);
-  }
-}
-
 /* LOADER background */
 @keyframes loader-anim-background {
   0% {

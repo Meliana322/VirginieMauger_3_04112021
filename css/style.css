@@ -399,24 +399,6 @@ template {
     transform: translateY(0);
   }
 }
-/* Bouton check sur les plats*/
-@keyframes check {
-  0% {
-    transform: rotate(90deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-/* Bouton check sur les plats*/
-@keyframes check-inverse {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(90deg);
-  }
-}
 /* LOADER background */
 @keyframes loader-anim-background {
   0% {
@@ -458,7 +440,7 @@ header .header__heading {
 }
 .header-restaurants .header-restaurants__icone {
   position: absolute;
-  left: 10%;
+  left: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -775,7 +757,7 @@ footer {
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
-  transition: all 20ms ease-in-out;
+  transition: all 0.5s ease-in-out;
   background-image: linear-gradient(#ff79da, #9356dc);
 }
 .card-icon .icone-heart--full:hover {
@@ -786,7 +768,7 @@ footer {
 /* !Pages restaurants Menu */
 .carte {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
@@ -854,12 +836,15 @@ footer {
   align-items: center;
   justify-content: center;
 }
+.carte__icone .carte__icone--slide {
+  transition: transform 0.5s;
+}
 
 .carte:hover .carte__icone {
   width: 20%;
 }
 .carte:hover .carte__icone .carte__icone--slide {
-  animation: check 500ms;
+  transform: rotate(1turn);
 }
 
 /* Bouton accueil */
