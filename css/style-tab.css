@@ -127,7 +127,7 @@
     height: 96px;
   }
 
-  .carte__icone--slide::before {
+  .carte__slide::before {
     font-size: 25px;
   }
 }

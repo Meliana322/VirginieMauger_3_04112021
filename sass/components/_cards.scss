@@ -223,7 +223,7 @@
   align-items: center;
   justify-content: center;
 
-  .carte__icone--slide {
+  .carte__slide {
     transition: transform 0.5s;
   }
 }
@@ -232,7 +232,7 @@
   .carte__icone {
     width: 20%;
 
-    .carte__icone--slide {
+    .carte__slide {
       transform: rotate(1turn);
     }
   }
