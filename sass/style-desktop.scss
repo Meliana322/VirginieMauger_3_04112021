@@ -150,6 +150,10 @@ $font-roboto: "Roboto", sans-serif;
     .card {
       width: 45%;
       height: 270px;
+
+      & .restaurant__description {
+        margin-top: 2%;
+      }
     }
   }
 

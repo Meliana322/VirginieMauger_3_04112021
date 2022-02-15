@@ -126,6 +126,9 @@
     width: 45%;
     height: 270px;
   }
+  .restaurants .card .restaurant__description {
+    margin-top: 2%;
+  }
 
   /* FOOTER */
   .footer {
